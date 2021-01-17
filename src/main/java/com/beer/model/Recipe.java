@@ -21,6 +21,8 @@ public class Recipe extends AbstractEntity{
     @Column(name = "eficencia")
     private Long eficiencia;
 
+    Recipe(){}
+
     public Recipe(String name, String cervejeiro, String tipo, String tamanhoLote, Long eficiencia) {
         this.name = name;
         this.cervejeiro = cervejeiro;
@@ -67,6 +69,14 @@ public class Recipe extends AbstractEntity{
 
     public void setEficiencia(Long eficiencia) {
         this.eficiencia = eficiencia;
+    }
+
+    public void updateRecipe(Recipe newRecipe) {
+        this.name = newRecipe.getName();
+        this.cervejeiro = newRecipe.getCervejeiro();
+        this.estilo = newRecipe.getEstilo();
+        this.tamanhoLote = newRecipe.getTamanhoLote();
+        this.eficiencia = newRecipe.getEficiencia();
     }
 
     @Override
