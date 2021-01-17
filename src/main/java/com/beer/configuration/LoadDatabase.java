@@ -19,8 +19,6 @@ public class LoadDatabase {
         return args -> {
             log.info("Preloading " + repository.save(new Recipe("IPA 1", "Matheus", "IPA", "20", 58L)));
             log.info("Preloading " + repository.save(new Recipe("Creme Ale", "Matheus", "Cream Ale", "20", 58L)));
-            log.info("Preloading " + repository.save(new Recipe("Deadline", "Matheus", "Red Ale", "20", 58L)));
-
         };
     }
 }
